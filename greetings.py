@@ -1,14 +1,14 @@
 #создание нужных переменных
-username = 'имя пользователя:'
-title = 'заголовок:'
-content = 'описание:'
-status = 'статус:'
-created_date = '10-11-24'
-issue_date = '10-12-24'
+username = 'райан гослинг'  #имя пользователя
+title = 'поход в магазин' #заголовок
+content = 'купить пиво, кириешки и рыбку' #описание
+status = 'в работе' #статус заметки
+created_date = '10-11-24' #дата создания заметки
+issue_date = '10-12-24' #дата дедлайна
 
-print('имя пользователя', username )
+print('имя пользователя:', username )
 print('заголовок:', title)
 print('описание:', content)
 print('статус:', status)
-print('10-11-24', created_date)
-print('10-12-24', issue_date)
+print('дата создания заметки:', created_date)
+print('дата дедлайна:', issue_date)
