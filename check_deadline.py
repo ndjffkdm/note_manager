@@ -1,27 +1,26 @@
 # импорт необходимых модулей
-from datetime import datetime
+import datetime
 
 # основной блок кода
 while True:
     try:
         # запрашиваем дату дедлайна
-        deadline_str = input('Введите дату истечения (в формате xx-xx-20xx, например 10-01-2025): ')
+        deadline_str = input('Введите дату истечения заметки (в формате xx-xx-xxxx, например 10-01-2025): ')
 
         # преобразуем строку с датой в объект datetime
-        deadline_date = datetime.strptime(deadline_str, "%d-%m-%Y")
+        deadline_date = datetime.datetime.strptime(deadline_str, "%d-%m-%Y")
 
         # вычисляем разницу между текущей датой и дедлайном
-        current_date = datetime.now() # текущая дата
-        time_difference = deadline_date - current_date
+        time_difference = datetime.datetime.today() - deadline_date
         days_difference = time_difference.days
 
         # проверяем статус дедлайна и выводим соответствующее сообщение
-        if days_difference < 0:
+        if days_difference > 0:
             print(f'Дедлайн истек {abs(days_difference):02d} дней назад!')
         elif days_difference == 0:
             print('Дедлайн истекает сегодня!')
         else:
-            print(f'Дедлайн истекает через {days_difference:02d} дней.')
+            print(f'Дедлайн истекает через {abs(days_difference):02d} дней.')
 
         # прерываем цикл после успешной обработки даты
         break
