@@ -1,11 +1,11 @@
 print('Добро пожаловать в менеджер заметок! Вы можете создать заметку.')
 notes = list()
 while True:
-    answer = input('Хотите создать заметку? ')
+    answer = input('Хотите создать заметку?\n')
     if answer == 'да':
         info = dict()
         info['Имя пользователя'] = input('Введите ваше имя: ')
-        info['Заголовки'] = [] # создаем список для хранения нескольких заголовков
+        info['Заголовки'] = []
         for i in range(3):
             title = input(f"Введите заголовок заметки {i + 1}: ")
             info['Заголовки'].append(title)
@@ -23,10 +23,10 @@ while True:
         print('\nВаши заметки: ')
         for i in notes:
             note_number = notes.index(i) + 1
-            print('\n', note_number, 'заметка')
+            print(f' заметка №{note_number}')
             for key, value in i.items():
                 print(f'{key}: {value}')
         break
     else:
         print('Ошибка!')
-        print('Попробуйте ещё раз')
+        print('Попробуйте ещё раз\n')

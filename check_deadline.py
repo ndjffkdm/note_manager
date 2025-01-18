@@ -5,7 +5,7 @@ import datetime
 while True:
     try:
         # запрашиваем дату дедлайна
-        deadline_str = input('Введите дату истечения заметки (в формате xx-xx-xxxx, например 10-01-2025): ')
+        deadline_str = input('Введите дату истечения заметки (в формате xx-xx-xxxx, например 10-01-2025):\n')
 
         # преобразуем строку с датой в объект datetime
         deadline_date = datetime.datetime.strptime(deadline_str, "%d-%m-%Y")
